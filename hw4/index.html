@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>HW4 - 景點觀光展覽資訊</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .custom-thead { background-color: #00b050; color: white; }
+        #pageInfo { margin: 0 15px; font-weight: bold; }
+    </style>
+</head>
+<body class="p-4">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h1>景點觀光展覽資訊</h1>
+            <div>
+                <input type="text" id="searchInput" class="form-control" placeholder="搜尋名稱..." onchange="handleSearch()">
+            </div>
+        </div>
+
+        <table id="csie" class="table table-striped table-hover border">
+            <thead class="custom-thead">
+                <tr>
+                    <th>名稱</th>
+                    <th>地點</th>
+                </tr>
+            </thead>
+            <tbody>
+                </tbody>
+        </table>
+
+        <div class="d-flex align-items-center">
+            <button class="btn btn-outline-secondary btn-sm" onclick="changePage(-1)">上一頁</button>
+            <span id="pageInfo">1 / 1 頁</span>
+            <button class="btn btn-outline-secondary btn-sm" onclick="changePage(1)">下一頁</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
